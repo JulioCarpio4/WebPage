@@ -19,18 +19,18 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
                 <a class="nav-link" href="#" style="color: white">
-                    Home
+                    Principal
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"style="color: white">
-                    Features
+                    Acerca de nosotros
                 </a>
          </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"style="color: white">
-                    Pricing
+                    Contáctanos
                 </a>
             </li>
             <li class="nav-item">
@@ -44,7 +44,17 @@
     </header>
 
     <div class="container">
-        <h3>Roster Actual:</h1>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Roster Actual</a></li>
+            <li><a href="#">Mantenimiento de Jugadores</a></li>
+            <li><a href="#">Ingreso de partidos</a></li>
+            <li><a href="#">Calendario</a></li>
+        </ul>
+        <br>
+    </div>
+
+    <div class="container">
+        <h3>Roster Actual:</h3>
         <table id="TablaRoster" class= "table table-hover table-striped">
             <thead>
                 <tr>
@@ -113,6 +123,7 @@
     </div>
 
     <div class="container">
+        <h3>Ingreso de Jugadores:</h3>
         <form>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -139,7 +150,7 @@
                     <input type="number" class="form-control" name="weight" placeholder="Peso" step="10" min="0" required/>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="Posición">Posición de Juego:</label>
+                    <label for="Posición">Posición Primaria:</label>
                     <select class="form-control">
                         <option>Select...</option>
                         <option>Lanzador</option>
@@ -155,27 +166,37 @@
                 </div>
             </div>
             <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Celular">Celular:</label>
+                    <input type="number" class="form-control" name="celular" placeholder="Celular" min="0" required/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Jersey">No. de Jersey:</label>
+                    <input type="number" class="form-control" name="jersey" placeholder="Jersey" step="1" min="0" required/>
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-md-6 text-center">
-                    <label for="Posición">Atrapa:</label>
+                    <label for="Batea">Batea:</label>
                     <label class="radio-inline">
-                        <input type="radio" name="optradio" checked> Derecho
+                        <input type="checkbox" name="bateaD" checked> Derecho
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="optradio" checked> Zurdo
-                    </label>
-                    <label class="radio-inline">
-                            <input type="radio" name="optradio" checked> Ambidiestro
+                        <input type="checkbox" name="bateaZ" > Zurdo
                     </label>
                 </div>
                 <div class="form-group col-md-6 text-center">
-                    <label for="Posición">Batea:</label>
+                    <label for="Atrapa">Atrapa:</label>
                     <label class="radio-inline">
-                        <input type="radio" name="optradio" checked> Derecho
+                        <input type="checkbox" name="AtrapaD" > Derecho
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="optradio" checked> Zurdo
+                        <input type="checkbox" name="AtrapaZ"> Zurdo
                     </label>
                 </div>
+            </div>
+            <div class="form-row float-right">
+                <button type="button" class="btn btn-lg float-right">Guardar Jugador</button> 
             </div>
         </form>
     </div>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand align-top" href="#">
+            <img class="d-inline-block" src="./images/Baseball.png" width="40" height="40" alt="">
+            Béisbol para todos
+        </a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" style="color: white">
+                    Principal
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white">
+                    Acerca de nosotros
+                </a>
+         </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white">
+                    Contáctanos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white">
+                    About
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+
+    </header>
+
+    <div class="container">    
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Roster Actual</a></li>
+            <li><a data-toggle="tab" href="#menu1">Mantenimiento de Jugadores</a></li>
+            <li><a data-toggle="tab" href="#menu2">Ingreso de partidos</a></li>
+            <li><a data-toggle="tab" href="#menu3">Calendario</a></li>
+        </ul>
+          
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="container">
+                    <h3>Roster Actual:</h3>
+                    <table id="TablaRoster" class= "table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">No. Jersey</th>
+                                <th scope="col">Nombre Completo</th>
+                                <th scope="col">Posición</th>
+                                <th scope="col">Orden en lineup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">21</th>
+                                <td>Julio Carpio</td>
+                                 <td>Segunda Base</td>
+                                <td>Cuarto</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Antonio Rezzio</td>
+                                <td>Primera Base</td>
+                                <td>Primero</td>
+                            </tr>
+                                <th scope="row">3</th>
+                                <td>Javier Santizo</td>
+                                <td>Shortstop</td>
+                                <td>Segundo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">17</th>
+                                <td>Kris González</td>
+                                <td>Tercera Base</td>
+                                <td>Tercero</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">44</th>
+                                <td>Cristian Villanueva</td>
+                                <td>Left Fielder</td>
+                                <td>Quinto</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">32</th>
+                                <td>Emilio Ramirez</td>
+                                <td>Center Fielder</td>
+                                <td>Séptimo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">49</th>
+                                <td>José Quintana</td>
+                                <td>Lanzador</td>
+                                <td>Noveno</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">19</th>
+                                <td>Edwin Díaz</td>
+                                <td>Right Fielder</td>
+                                <td>Sexto</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">28</th>
+                                <td>Roberto Clemente</td>
+                                <td>Receptor</td>
+                                <td>Octavo</td>
+                            </tr>
+                        </tbody>  
+                    </table>
+                </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <div class="container">
+                    <h3>Ingreso de Jugadores:</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputName4">Nombre Completo:</label>
+                                <input type="Name" class="form-control" id="inputName4" placeholder="Nombre Completo" required/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputName4">Fecha de Nacimiento:</label>
+                                <div class="input-group date" id="datetimepicker1">                        
+                                    <input type='text' class="form-control" placeholder="Fecha de nacimiento"  required/>
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="Estatura">Estatura (Metros):</label>
+                                <input type="number" class="form-control" name="height" placeholder="Estatura" step="0.05" min="0" required/>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="Peso">Peso (lbs):</label>
+                                <input type="number" class="form-control" name="weight" placeholder="Peso" step="10" min="0" required/>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="Posición">Posición Primaria:</label>
+                                <select class="form-control">
+                                    <option>Select...</option>
+                                    <option>Lanzador</option>
+                                    <option>Receptor</option>
+                                    <option>Primera Base</option>
+                                    <option>Segunda Base</option>
+                                    <option>Tercera Base</option>
+                                    <option>Shortstop</option>
+                                    <option>Left Fielder</option>
+                                    <option>Center Fielder</option>
+                                    <option>Right Fielder</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Celular">Celular:</label>
+                                <input type="number" class="form-control" name="celular" placeholder="Celular" min="0" required/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Jersey">No. de Jersey:</label>
+                                <input type="number" class="form-control" name="jersey" placeholder="Jersey" step="1" min="0" required/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 text-center">
+                                <label for="Batea">Batea:</label>
+                                <label class="radio-inline">
+                                    <input type="checkbox" name="bateaD" checked> Derecho
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="checkbox" name="bateaZ" > Zurdo
+                                </label>
+                            </div>
+                            <div class="form-group col-md-6 text-center">
+                                <label for="Atrapa">Atrapa:</label>
+                                <label class="radio-inline">
+                                    <input type="checkbox" name="AtrapaD" > Derecho
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="checkbox" name="AtrapaZ"> Zurdo
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row float-right">
+                            <button type="button" class="btn btn-lg float-right">Guardar Jugador</button> 
+                        </div>
+                    </form>
+            </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+    <script src="./vanillaJS.js"></script>
+  </body>
+</html>
